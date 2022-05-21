@@ -1,1 +1,202 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.navigationBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  width: 100%;
+  height: 50px;
+  padding: 1em;
+  position: fixed;
+  -webkit-box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+          box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  color: #2d314d;
+}
+
+@media screen and (min-width: 1440px) {
+  .navigationBar {
+    height: 70px;
+  }
+}
+
+.navigationBar .navigationLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  padding: 2em 1em;
+  border-radius: 0.2em;
+  position: absolute;
+  left: 100%;
+  color: #9698a6;
+}
+
+@media screen and (min-width: 1440px) {
+  .navigationBar .navigationLink {
+    position: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2em;
+  }
+}
+
+.navigationBar .navigationLink[data-visible="true"] {
+  top: calc(50px + 5vw);
+  left: 5vw;
+  right: 5vw;
+  background-color: white;
+}
+
+.navigationBar .mainButton {
+  background: #31d35c;
+  background: linear-gradient(144deg, #31d35c 0%, #2bb7d0 100%);
+  padding: 0.8em 1.5em;
+  border-radius: 2em;
+  color: white;
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .navigationBar .mainButton {
+    display: block;
+  }
+}
+
+.navigationBar .mobileNavToggle {
+  display: block;
+  cursor: pointer;
+  width: 2rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-image: url(/images/icon-hamburger.svg);
+}
+
+@media screen and (min-width: 1440px) {
+  .navigationBar .mobileNavToggle {
+    display: none;
+  }
+}
+
+.navigationBar .mobileNavToggle[aria-expanded="true"] {
+  display: block;
+  cursor: pointer;
+  width: 2rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-image: url(/images/icon-close.svg);
+}
+
+@media screen and (min-width: 1440px) {
+  .navigationBar .mobileNavToggle[aria-expanded="true"] {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

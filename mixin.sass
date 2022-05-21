@@ -1,0 +1,23 @@
+@import './variables';
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin ctaButton {
+    background: rgb(49,211,92);
+    background: linear-gradient(144deg, rgba(49,211,92,1) 0%, rgba(43,183,208,1) 100%);
+    padding: 0.8em 1.5em;
+    border-radius: 2em;
+    color: $white;
+}
+
+@mixin flexBeetween ($direction, $gap) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+    gap: $gap;
+}

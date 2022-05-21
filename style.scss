@@ -1,0 +1,108 @@
+@import './reset';
+@import './variables';
+
+*{
+    box-sizing: border-box;
+}
+
+@function weight ($weight-name){
+    @return map-get($font-weight, $weight-name)
+};
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin ctaButton {
+    background: rgb(49,211,92);
+    background: linear-gradient(144deg, rgba(49,211,92,1) 0%, rgba(43,183,208,1) 100%);
+    padding: 0.8em 1.5em;
+    border-radius: 2em;
+    color: $white;
+}
+
+@mixin flexBeetween ($direction, $gap) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin mobileNavToggle{
+    display: block;
+    cursor: pointer;
+    width: 2rem;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+.container{
+    width: $mobile-container-width;
+    margin: auto;
+    @include desktop{
+        width: $desktop-container-width;
+        margin: auto;
+    }
+}
+
+.navigationBar{
+    @include flexBeetween(row, 0);
+    width: 100%;
+    height: 50px;
+    padding: 1em;
+    position: fixed;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    font-family: $main-font;
+    font-weight: weight(regular);
+    color: $dark-blue;
+    @include desktop{
+        height: 70px;
+    }
+
+    .navigationLink{
+        @include flexBeetween(column, 1em);
+        padding: 2em 1em;
+        border-radius: 0.2em;
+        position: absolute;
+        left: 100%;
+        color: $grayish-blue;
+        @include desktop{
+            position: unset;
+            @include flexBeetween(row, 2em);
+        }
+        &[data-visible="true"]{
+            top: calc(50px + 5vw);
+            left: 5vw;
+            right: 5vw;
+            background-color: $white;
+        }
+    }
+
+    .mainButton{
+        @include ctaButton;
+        display: none;
+        @include desktop{
+            display: block;
+        }
+    }
+    
+    .mobileNavToggle{
+        @include mobileNavToggle;
+        background-image: url(/images/icon-hamburger.svg);
+        @include desktop{
+            display: none;
+        }
+        &[aria-expanded="true"]{
+            @include mobileNavToggle;
+            background-image: url(/images/icon-close.svg);
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+}
