@@ -11,6 +11,12 @@ $font-weight: (
     "regular" : 400,
     "bold" : 700
 );
+$font-size: (
+    "paragraph" : 14px,
+    "paragraph-lg" : 16px, 
+    "header" : 30px,
+    "header-lg": 50px,
+);
 $mobile : 375px;
 $desktop : 1440px;
 $mobile-container-width: 90%;
