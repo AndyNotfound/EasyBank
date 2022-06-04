@@ -104,6 +104,10 @@ table {
   }
 }
 
+.navigationBar .companyLogo {
+  cursor: pointer;
+}
+
 .navigationBar .navigationLink {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,9 +208,57 @@ table {
 }
 
 .hero {
+  margin-bottom: 7.5em;
   font-family: "Public Sans", sans-serif;
   text-align: center;
   overflow-x: hidden;
+  font-family: "Public Sans", sans-serif;
+}
+
+.hero h1 {
+  color: #2d314d;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+
+.hero h2 {
+  color: #2d314d;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero h2 {
+    font-size: 35px;
+  }
+}
+
+.hero h3 {
+  color: #2d314d;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero h3 {
+    font-size: 25px;
+  }
+}
+
+.hero p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9698a6;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -230,6 +282,7 @@ table {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 700px -170px;
+    margin-bottom: 0em;
   }
 }
 
@@ -282,30 +335,6 @@ table {
   }
 }
 
-.hero .Intro h1 {
-  color: #2d314d;
-  font-size: 30px;
-  font-weight: 400;
-}
-
-@media screen and (min-width: 1440px) {
-  .hero .Intro h1 {
-    font-size: 50px;
-  }
-}
-
-.hero .Intro p {
-  font-size: 14px;
-  font-weight: 300;
-  color: #9698a6;
-}
-
-@media screen and (min-width: 1440px) {
-  .hero .Intro p {
-    font-size: 16px;
-  }
-}
-
 .hero .Intro .heroButton {
   font-size: 14px;
   background: #31d35c;
@@ -322,6 +351,10 @@ table {
 }
 
 .whyChooseUs {
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -331,21 +364,70 @@ table {
           justify-content: space-between;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  gap: 1em;
-  font-family: "Public Sans", sans-serif;
-  text-align: center;
+  gap: 3em;
+}
+
+.whyChooseUs h1 {
+  color: #2d314d;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs h1 {
+    font-size: 50px;
+  }
+}
+
+.whyChooseUs h2 {
+  color: #2d314d;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs h2 {
+    font-size: 35px;
+  }
+}
+
+.whyChooseUs h3 {
+  color: #2d314d;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs h3 {
+    font-size: 25px;
+  }
+}
+
+.whyChooseUs p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9698a6;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .whyChooseUs {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs {
     text-align: start;
+    margin-top: 0em;
   }
 }
 
 .whyChooseUs .gridItem {
-  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,22 +455,6 @@ table {
   }
 }
 
-.whyChooseUs .gridItem h3 {
-  color: #2d314d;
-  font-size: 20px;
-}
-
-@media screen and (min-width: 1440px) {
-  .whyChooseUs .gridItem h3 {
-    font-size: 25px;
-  }
-}
-
-.whyChooseUs .gridItem p {
-  color: #9698a6;
-  font-size: 14px;
-}
-
 .whyChooseUs .gridItem:first-child {
   margin-bottom: 1em;
 }
@@ -401,20 +467,146 @@ table {
   }
 }
 
-.whyChooseUs .gridItem:first-child h2 {
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem:first-child p {
+    width: 60ch;
+  }
+}
+
+.articlePost {
+  margin-top: 7.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  gap: 2em;
+  font-family: "Public Sans", sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+  .articlePost {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.articlePost h1 {
+  color: #2d314d;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1440px) {
+  .articlePost h1 {
+    font-size: 50px;
+  }
+}
+
+.articlePost h2 {
   color: #2d314d;
   font-size: 25px;
 }
 
 @media screen and (min-width: 1440px) {
-  .whyChooseUs .gridItem:first-child h2 {
+  .articlePost h2 {
     font-size: 35px;
   }
 }
 
+.articlePost h3 {
+  color: #2d314d;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 1440px) {
-  .whyChooseUs .gridItem:first-child p {
-    width: 60ch;
+  .articlePost h3 {
+    font-size: 25px;
   }
+}
+
+.articlePost p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9698a6;
+}
+
+@media screen and (min-width: 1440px) {
+  .articlePost p {
+    font-size: 16px;
+  }
+}
+
+.articlePost .postItem {
+  background-color: white;
+  border-bottom: 1.5px solid #f3f4f6;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0.35em;
+  border-bottom-right-radius: 0.35em;
+}
+
+.articlePost .postItem:first-child {
+  border-bottom: unset;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .articlePost .postItem:first-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: start;
+  }
+}
+
+.articlePost .postItem .postImage {
+  width: 100%;
+  cursor: pointer;
+}
+
+.articlePost .postItem .postImage img {
+  width: 100%;
+  border-top-left-radius: 0.35em;
+  border-top-right-radius: 0.35em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .articlePost .postItem .postImage img {
+    height: 225px;
+  }
+}
+
+.articlePost .postItem .postContent {
+  border-right: 1.5px solid #f3f4f6;
+  border-left: 1.5px solid #f3f4f6;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.articlePost .postItem .postContent .author {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
