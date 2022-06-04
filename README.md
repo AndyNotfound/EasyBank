@@ -15,7 +15,7 @@ Easybank landing page is a challenge posted at FrontendMentor.io for Frontend De
  
  ## Libraries
  <ul> 
-  <li><a href="https://sass-lang.com/">SASS</a> - CSS with superpowers</li>
+  <li><a href="https://sass-lang.com/">SASS</a> - CSS with superpowers.</li>
  </ul>
  
  ## Tools
