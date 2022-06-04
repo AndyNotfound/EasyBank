@@ -54,10 +54,6 @@
     }
 }
 
-@mixin  columnToRow {
-    
-}
-
 @mixin ctaButton {
     font-size: size(paragraph);
     background: rgb(49,211,92);
@@ -143,6 +139,31 @@
         @include desktop{
             position: unset;
             @include flexBeetween(row, 2em);
+            & a {
+                padding:0 0 26px 0;
+                position: relative;
+
+                &:hover{
+                    color: $dark-blue; 
+                    &::after {
+                        width: 100%; 
+                        left: 0; 
+                      }
+                }
+
+                &::after { 
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    display: block;
+                    background: none repeat scroll 0 0 transparent;
+                    height: 3px;
+                    width: 0;
+                    background: $lime-green;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                  }
+              }
         }
         &[data-visible="true"]{
             top: calc(50px + 5vw);
@@ -162,13 +183,13 @@
     
     .mobileNavToggle{
         @include mobileNavToggle;
-        background-image: url(/images/icon-hamburger.svg);
+        background-image: url(https://i.postimg.cc/SQVqNKHW/icon-hamburger.png);
         @include desktop{
             display: none;
         }
         &[aria-expanded="true"]{
             @include mobileNavToggle;
-            background-image: url(/images/icon-close.svg);
+            background-image: url(https://i.postimg.cc/PJVBbCk9/icon-close.png);
             @include desktop{
                 display: none;
             }
@@ -186,7 +207,7 @@
     @include desktop{
         @include flexBeetween(row-reverse, 5em);
         text-align: start;
-        background-image: url(/images/bg-intro-desktop.svg);
+        background-image: url(https://i.postimg.cc/5NGh6QgF/bg-intro-desktop.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 700px -170px;
@@ -195,7 +216,7 @@
 
     .heroImage{
         width: 100%;
-        background-image: url(/images/bg-intro-mobile.svg);
+        background-image: url(https://i.postimg.cc/Dy8VvPrT/bg-intro-mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
         @include desktop{
@@ -304,6 +325,13 @@
             @include flexBeetween(column, 0.5em);
             align-items: flex-start;
 
+            h3{
+                cursor: pointer;
+                &:hover{
+                    color: $lime-green;
+                }
+            }
+
             .author{
                 font-size: 12px;
             }
@@ -357,6 +385,10 @@
                 @include flexBeetween(column, 1em);
                 @include desktop{
                     align-items: flex-start;
+                }
+
+                & a:hover{
+                    color: $lime-green;
                 }
             }
         }   

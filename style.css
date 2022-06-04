@@ -148,6 +148,30 @@ table {
             flex-direction: row;
     gap: 2em;
   }
+  .navigationBar .navigationLink a {
+    padding: 0 0 26px 0;
+    position: relative;
+  }
+  .navigationBar .navigationLink a:hover {
+    color: #2d314d;
+  }
+  .navigationBar .navigationLink a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  .navigationBar .navigationLink a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 3px;
+    width: 0;
+    background: #31d35c;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
 }
 
 .navigationBar .navigationLink[data-visible="true"] {
@@ -181,7 +205,7 @@ table {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url(/images/icon-hamburger.svg);
+  background-image: url(https://i.postimg.cc/SQVqNKHW/icon-hamburger.png);
 }
 
 @media screen and (min-width: 1440px) {
@@ -198,7 +222,7 @@ table {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url(/images/icon-close.svg);
+  background-image: url(https://i.postimg.cc/PJVBbCk9/icon-close.png);
 }
 
 @media screen and (min-width: 1440px) {
@@ -278,7 +302,7 @@ table {
             flex-direction: row-reverse;
     gap: 5em;
     text-align: start;
-    background-image: url(/images/bg-intro-desktop.svg);
+    background-image: url(https://i.postimg.cc/5NGh6QgF/bg-intro-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 700px -170px;
@@ -288,7 +312,7 @@ table {
 
 .hero .heroImage {
   width: 100%;
-  background-image: url(/images/bg-intro-mobile.svg);
+  background-image: url(https://i.postimg.cc/Dy8VvPrT/bg-intro-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -605,6 +629,14 @@ table {
           align-items: flex-start;
 }
 
+.articlePost .postItem .postContent h3 {
+  cursor: pointer;
+}
+
+.articlePost .postItem .postContent h3:hover {
+  color: #31d35c;
+}
+
 .articlePost .postItem .postContent .author {
   font-size: 12px;
 }
@@ -846,6 +878,10 @@ table {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+
+.footer .importantLinks .menuLinks .internal a:hover, .footer .importantLinks .menuLinks .external a:hover {
+  color: #31d35c;
 }
 
 .footer .callToAct {
