@@ -54,6 +54,10 @@
     }
 }
 
+@mixin  columnToRow {
+    
+}
+
 @mixin ctaButton {
     font-size: size(paragraph);
     background: rgb(49,211,92);
@@ -227,8 +231,7 @@
 }
 
 .whyChooseUs{
-    margin-top: 7.5em;
-    margin-bottom: 7.5em;
+    margin: 7.5em auto 7.5em auto;
     text-align: center;
     @include font;
     @include mainGrid(3em);
@@ -262,7 +265,7 @@
 
 
 .articlePost{
-    margin-top: 7.5em;
+    margin: 7.5em auto 7.5em auto;
     @include mainGrid(2em);
     @include font;
 
@@ -308,3 +311,66 @@
     }
     
 }
+
+
+.footer{
+    background-color: $dark-blue;
+    padding: 2em 1em;
+    @include font;
+    @include flexBeetween(column, 2em);
+    @include desktop{
+        @include flexBeetween(row, 1em);
+        padding: 2em calc(100% - 90%) 2em calc(100% - 90%);
+    }
+
+    .importantLinks{
+        @include flexBeetween(column, 2em);
+        @include desktop{
+            @include flexBeetween(row, 10em);
+        }
+
+        .socialLinks{
+            color: $white;
+            text-align: center;
+            @include flexBeetween(column, 2em);
+            @include desktop{
+                align-items: flex-start;
+            }
+
+            .social{
+                @include flexBeetween(row, 1em);
+                justify-content: center;
+                @include desktop{
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .menuLinks{
+            color: $white;
+            @include flexBeetween(column, 1em);
+            @include desktop{
+                @include flexBeetween(row, 5em);
+            }
+
+            .internal, .external{
+                @include flexBeetween(column, 1em);
+                @include desktop{
+                    align-items: flex-start;
+                }
+            }
+        }   
+    }
+
+    .callToAct{
+        @include flexBeetween(column, 1em);
+        @include desktop{
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        button{
+            @include ctaButton;
+        }
+    }
+}    
