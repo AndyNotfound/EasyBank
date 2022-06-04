@@ -13,9 +13,13 @@ $font-weight: (
 );
 $font-size: (
     "paragraph" : 14px,
-    "paragraph-lg" : 16px, 
-    "header" : 30px,
-    "header-lg": 50px,
+    "paragraphLg" : 16px, 
+    "headerOne" : 30px,
+    "headerOneLg": 50px,
+    "headerTwo": 25px,
+    "headerTwoLg": 35px,
+    "headerThree": 20px,
+    "headerThreeLg": 25px,
 );
 $mobile : 375px;
 $desktop : 1440px;

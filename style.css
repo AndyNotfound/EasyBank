@@ -283,6 +283,7 @@ table {
 }
 
 .hero .Intro h1 {
+  color: #2d314d;
   font-size: 30px;
   font-weight: 400;
 }
@@ -317,6 +318,103 @@ table {
 @media screen and (min-width: 1440px) {
   .hero .Intro .heroButton {
     font-size: 16px;
+  }
+}
+
+.whyChooseUs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  gap: 1em;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    text-align: start;
+  }
+}
+
+.whyChooseUs .gridItem {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.whyChooseUs .gridItem h3 {
+  color: #2d314d;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem h3 {
+    font-size: 25px;
+  }
+}
+
+.whyChooseUs .gridItem p {
+  color: #9698a6;
+  font-size: 14px;
+}
+
+.whyChooseUs .gridItem:first-child {
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem:first-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.whyChooseUs .gridItem:first-child h2 {
+  color: #2d314d;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem:first-child h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .whyChooseUs .gridItem:first-child p {
+    width: 60ch;
   }
 }
 /*# sourceMappingURL=style.css.map */

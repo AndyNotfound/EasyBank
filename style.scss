@@ -139,7 +139,6 @@
             width: 60%;
             position: relative;
             right: -120px;
-
         }
     }
 
@@ -158,10 +157,11 @@
         }
 
         h1{
-            font-size: size(header);
+            color: $dark-blue;
+            font-size: size(headerOne);
             font-weight: weight(regular);
             @include desktop{
-                font-size: size(header-lg);
+                font-size: size(headerOneLg);
             }
         }
 
@@ -170,16 +170,77 @@
             font-weight: weight(thin);
             color: $grayish-blue;
             @include desktop{
-                font-size: size(paragraph-lg);
+                font-size: size(paragraphLg);
             }
         }
 
         .heroButton{
             @include ctaButton;
             @include desktop{
-                font-size: size(paragraph-lg);
+                font-size: size(paragraphLg);
             }
         }
     }
     
+}
+
+.whyChooseUs{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-content: space-around;
+    gap: 1em;
+    font-family: $main-font;
+    text-align: center;
+    @include desktop{
+        grid-template-columns: repeat(4, 1fr);
+        text-align: start;
+    }
+
+    .gridItem{
+        padding: 1em;
+        @include flexBeetween(column, 1em);
+        justify-content: flex-start;
+        @include desktop{
+            align-items: flex-start;
+        }
+
+        h3{
+            color: $dark-blue;
+            font-size: size(headerThree);
+            @include desktop{
+                font-size: size(headerThreeLg);
+            }
+        }
+
+        p{
+            color: $grayish-blue;
+            font-size: size(paragraph);
+            @include desktop{
+                font-size: size(paragraph-lg);
+            }
+        }
+
+        &:first-child{
+            margin-bottom: 1em;
+            @include desktop{
+                grid-column-start: 1;
+                grid-column-end: 5; 
+            }
+            
+            h2{
+                color: $dark-blue;
+                font-size: size(headerTwo);
+                @include desktop{
+                    font-size: size(headerTwoLg);
+                }
+            }
+
+            p{
+                @include desktop{
+                    width: 60ch;
+                }
+            }
+        }
+    }
 }
